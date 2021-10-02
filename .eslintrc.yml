@@ -15,7 +15,7 @@ rules:
   no-console: error
   prettier/prettier: [error, { endOfLine: auto }]
   react-hooks/exhaustive-deps: off
-  react/prop-types: warn
+  react/prop-types: off
 overrides:
   - files:
       - '*.test.js'
