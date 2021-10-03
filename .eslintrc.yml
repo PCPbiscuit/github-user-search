@@ -1,6 +1,9 @@
 extends:
   - eslint:recommended
   - plugin:prettier/recommended
+  - plugin:@typescript-eslint/recommended
+plugins:
+  - '@typescript-eslint'
 env:
   browser: true
   node: true
@@ -16,7 +19,8 @@ rules:
   no-console: error
   prettier/prettier: [error, { endOfLine: auto }]
   react-hooks/exhaustive-deps: off
-  react/prop-types: off
+  react/prop-types: warn
+  '@typescript-eslint/explicit-module-boundary-types': off
 overrides:
   - files:
       - '*.test.js'

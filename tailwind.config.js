@@ -30,6 +30,12 @@ module.exports = {
         md: ['16px', '24px'],
         s: ['13px', '20px'],
       },
+      boxShadow: {
+        search: '0px 16px 30px -10px rgba(70, 96, 187, 0.198567);',
+      },
+      width: {
+        fit: 'fit-content',
+      },
     },
   },
   variants: {
