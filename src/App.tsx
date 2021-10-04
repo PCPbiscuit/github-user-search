@@ -1,4 +1,4 @@
-import { Layout, Header, Search } from './components';
+import { Layout, Header, Search, Card } from './components';
 import { ThemeProvider } from './components/theme/themeContext.jsx';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
       <Layout>
         <Header />
         <Search />
+        <Card />
       </Layout>
     </ThemeProvider>
   );
