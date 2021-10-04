@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { Links } from '../';
+
 export const Card: FC = () => {
   return (
     <div className="flex p-12 w-full bg-white rounded-2xl shadow-search">
@@ -29,6 +31,7 @@ export const Card: FC = () => {
             <p className="font-bold text-black text-l">9</p>
           </div>
         </div>
+        <Links />
       </div>
     </div>
   );
