@@ -11,10 +11,10 @@ export const Search: FC = () => {
     console.log(e.target.value);
   };
   return (
-    <div className="bg-white-ish w-full p-2.5 pl-8 rounded-2xl shadow-search mt-9 mb-6 text flex justify-between items-center">
+    <div className="bg-white-ish dark:bg-blue-dark w-full p-2.5 pl-8 rounded-2xl shadow-search mt-9 mb-6 text flex justify-between items-center">
       <SearchIcon className="cursor-pointer w-7 h-7 mt-1.5" />
       <Input
-        className="w-full mx-6 text-lg ring-0 outline-none focus:ring-0 caret-blue placeholder-blue-ish"
+        className="w-full mx-6 text-lg ring-0 outline-none focus:ring-0 caret-blue placeholder-blue-ish bg-transparent dark:placeholder-white-ish"
         placeholder="Search GitHub username…"
         onChange={handleSearch}
       />

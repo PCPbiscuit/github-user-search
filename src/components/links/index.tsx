@@ -7,24 +7,24 @@ import { ReactComponent as Website } from './website.svg';
 
 export const Links: FC = () => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 dark:text-white text-blue-ish">
       <div className="space-y-4">
         <div className="flex items-center space-x-5">
-          <Location />
+          <Location className=" fill-current" />
           <p>San Francisco</p>
         </div>
         <div className="flex items-center space-x-5">
-          <Website />
+          <Website className=" fill-current" />
           <p>Not available</p>
         </div>
       </div>
       <div className="space-y-4">
         <div className="flex items-center space-x-5">
-          <Twitter />
+          <Twitter className=" fill-current" />
           <p>Not available</p>
         </div>
         <div className="flex items-center space-x-5">
-          <Company />
+          <Company className=" fill-current" />
           <p>Not available</p>
         </div>
       </div>
