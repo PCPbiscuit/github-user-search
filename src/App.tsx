@@ -1,6 +1,6 @@
 import { Layout, Header, Search, Card } from './components';
 import { ThemeProvider } from './components/theme/themeContext.jsx';
-import SearchProvider from './components/search/searchContext.jsx';
+import { SearchContextProvider } from './components/search/searchContext.jsx';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 function App() {
@@ -9,13 +9,13 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <SearchProvider>
+        <SearchContextProvider>
           <Layout>
             <Header />
             <Search />
             <Card />
           </Layout>
-        </SearchProvider>
+        </SearchContextProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );

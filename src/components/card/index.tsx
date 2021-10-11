@@ -1,17 +1,21 @@
 import type { FC } from 'react';
+import { useContext } from 'react';
 
 import { Links } from '../';
 import { makeRequest } from '../../api';
+import { SearchContext } from '../search/searchContext';
 
 import { useQuery } from 'react-query';
 
 export const Card: FC = () => {
-  const fetch = () => makeRequest('/users/PCPbiscuit');
-  const { data: data, isSuccess } = useQuery('user', fetch, {
+  const fetch = () => makeRequest(`/users/PCPbiscuit`);
+  // const fetch = () => makeRequest(`/users/${search}`);
+  const { data: data } = useQuery('user', fetch, {
     retryDelay: 10000,
   });
-  console.log(data);
-  console.log(isSuccess);
+  const [search, setSearch] = useContext(SearchContext);
+
+  if (!data) return null;
 
   return (
     <div className="flex p-12 w-full bg-white rounded-2xl shadow-search dark:bg-blue-dark">
