@@ -1,15 +1,22 @@
 import type { FC } from 'react';
 import { useContext } from 'react';
+import { useQuery } from 'react-query';
 
 import { ReactComponent as SearchIcon } from './search.svg';
+import { makeRequest } from '../../api';
 import { SearchContext } from './searchContext';
 import { Button, Input } from '../';
 
 export const Search: FC = () => {
   const [search, setSearch] = useContext(SearchContext);
+  const fetch = () => makeRequest(`/users/${search}`);
+  const { refetch, remove } = useQuery('user', fetch, {
+    enabled: false,
+  });
 
   const handleClick = e => {
-    console.log(e);
+    e.preventDefault();
+    search == '' ? remove() : refetch();
   };
   const handleSearch = e => {
     setSearch(e.target.value);
